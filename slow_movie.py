@@ -40,10 +40,6 @@ def SlowMovie(vid_in_path, slow_factor=2, continuous_fine_tuning=False,
 
     #Total number of frames
     n_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-    if n_frames > 220:
-        n_frames = 220
-        print("Limiting number of frames to 220. Feel free to remove.")
-
     real_frames = Queue()
     
     if not os.path.exists(tmp_dir):
